@@ -1,0 +1,40 @@
+<html>
+    <body>
+        <h2>Array Mapping and Sorting HW </h2>
+        <button onclick="Ascn()">Ascending Order</button>
+        <button onclick="Descn()">Descending Order</button>
+        <p id="i1"></p>
+        <p id="i2"></p>
+        <script>
+            var array = [18,5,0,-9,7,33];
+
+            document.getElementById("i1").innerHTML="Original array : "+array;
+
+            function multiply(a) {
+                return a * 5;
+            }
+
+            var narray = array.map(multiply);
+
+            function Ascn() {
+                    document.getElementById("i1").innerHTML = "Before Sorting : " + narray;
+
+                    narray.sort(function (a, b) { return a-b });
+                    document.getElementById("i2").innerHTML = "After Sorting : " + narray;
+                }
+
+            var array = [18, 5, 0, -9, 7, 33];
+            var narray = array.map(multiply);
+
+           function Descn(){
+            document.getElementById("i1").innerHTML="Before Sorting : " + narray;
+            
+            narray.sort(function(a,b){return b-a});
+            document.getElementById("i2").innerHTML="After Sorting : "+ narray;
+           }
+
+            var narray = array.map(multiply);
+
+        </script>
+    </body>
+</html>
